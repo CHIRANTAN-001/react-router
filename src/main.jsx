@@ -10,6 +10,9 @@ import Profile from './components/Profile/Profile.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import User from './components/User/User.jsx'
 import Github, { githubInforLoader } from './components/Github/Github.jsx'
+import Shadcn from './components/Shadcn/Shadcn.jsx'
+import Placeholder from './components/Placeholder/Placeholder.jsx'
+import PlaceholderById from './components/PlaceholderById/PlaceholderById.jsx'
 
 
 const GithubComponent = lazy(() => import('./components/Github/Github.jsx'))
@@ -31,6 +34,13 @@ const router = createBrowserRouter(
         element={<GithubComponent />} />
       
       <Route path='profile' element={<Profile />} />
+
+      <Route path='shadcn' element={<Shadcn />} />
+
+      <Route path='placeholder' element={<Placeholder />} />
+      
+      <Route path='placeholder/:id' element={<PlaceholderById/>} />
+
 
       <Route path='*' element={<div>Not found</div>} />
 
